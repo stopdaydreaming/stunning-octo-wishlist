@@ -9,8 +9,11 @@ $(document).ready(function() {
   }
   $("#add-items").on("submit", function(e) {
     e.preventDefault();
-    var itemEl = $("#wish-item");
-    var itemText = itemEl.val();
+    var wishItemEl = $("#wish-item");
+    var wishPriceEl = $("#wish-price");
+    var wishSizeEl = $("#wish-size");
+    var wishColorEl = $("#wish-color");
+    var itemText = wishItemEl.val() + " " + wishPriceEl.val()+ " " + wishSizeEl.val()+ " " + wishColorEl.val();
     generateList(itemText);
     itemsArray.push(itemText);
 
